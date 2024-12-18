@@ -1,0 +1,16 @@
+.heropage{
+    background: #121212;
+    color: #FFFFFF;
+}
+
+.text{
+    font-family: Poppins;
+    /* font-family: Poppins; */
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 48px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
