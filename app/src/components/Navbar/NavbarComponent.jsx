@@ -1,8 +1,8 @@
 import React from "react";
-import ButtonComponent from "./ButtonComponent";
 import styles from "./Navbar.module.css";
-import SearchbarComponent from "./SearchbarComponent";
 import NavbarIcon from "../Icons/NavbarIcon";
+import SearchbarComponent from "../Searchbar/SearchbarComponent";
+import ButtonComponent from "../Button/ButtonComponent";
 
 export default function NavbarComponent() {
   return (
@@ -24,7 +24,7 @@ export default function NavbarComponent() {
       >
         <NavbarIcon />
         <SearchbarComponent />
-        <ButtonComponent />
+        <ButtonComponent text="Send Feedback" />
       </div>
     </div>
   );
