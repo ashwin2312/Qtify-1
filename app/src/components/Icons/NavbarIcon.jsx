@@ -4,7 +4,7 @@ import navIcon from "../../assets/Qtify-nav-icon.png";
 export default function NavbarIcon() {
   return (
     <div>
-      <img src={navIcon} alt="" srcset="" />
+      <img src={navIcon} alt="" />
     </div>
   );
 }

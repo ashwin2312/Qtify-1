@@ -4,26 +4,37 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActionArea from "@mui/material/CardActionArea";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
+import { Typography } from "@mui/material";
+import styles from "./AlbumCard.module.css";
 
-export default function AlbumCard() {
+export default function AlbumCard({ image, follows, title }) {
   return (
-    <Card sx={{ maxWidth: 345 }}>
-      <div>
-        <CardActionArea>
-          <CardMedia
-            component="img"
-            height="140"
-            image="/static/images/cards/contemplative-reptile.jpg"
-            alt="green iguana"
-          />
-        </CardActionArea>
-        <Stack direction="row" spacing={1}>
-          <Chip label="Chip Filled" />
-        </Stack>
+    <div>
+      <Card
+        sx={{
+          maxWidth: 345,
+          gap: 2,
+          display: "flex",
+          flexDirection: "column",
+        }}
+      >
+        <div className={styles.card}>
+          <CardActionArea>
+            <CardMedia
+              component="img"
+              height="159"
+              image={image}
+              alt="green iguana"
+            />
+          </CardActionArea>
+          <Stack direction="row" spacing={1}>
+            <Chip className={styles.chipStyle} label={`${follows} Follows`} />
+          </Stack>
+        </div>
+      </Card>
+      <div className={styles.titleStyle}>
+        <Typography>{title}</Typography>
       </div>
-      <div>
-        <p>Album Name</p>
-      </div>
-    </Card>
+    </div>
   );
 }

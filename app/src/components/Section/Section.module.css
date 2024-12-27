@@ -1,0 +1,20 @@
+.btnStyle{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: #34C94B;
+    background-color: black;
+    border: none;
+}
+
+.btnStyle:hover{
+    cursor: pointer;
+}
+
+.textStyle{
+    font-family: Poppins;
+    font-size: 20px;
+    font-weight: 600;
+    color: #FFFFFF;
+
+}

@@ -1,0 +1,22 @@
+.card{
+    /* width: 150px; */
+    height: 205px;
+    gap: 5px;
+    border-radius: 20px ;
+    opacity: 0px;
+    /* background: #121212; */
+}
+
+.chipStyle{
+    background: #121212 !important;
+    color: #FFFFFF !important;
+    font-family: Poppins;
+    /* font-size: 10px; */
+    font-weight: 400;   
+    margin: 5px !important;
+}
+
+.titleStyle{
+    background-color: #121212;
+    color: #FFFFFF;
+}
