@@ -4,6 +4,7 @@ import HeroSection from "./Hero/HeroSection";
 import Divider from "@mui/material/Divider";
 import styles from "./Home.module.css";
 import Section from "./Section/Section";
+import Filters from "./Filters/Filters";
 
 export default function Home() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -43,6 +44,7 @@ export default function Home() {
       <Section albumsData={topAlbumsData} title="Top Albums" />
 
       <Section albumsData={newAlbumsData} title="New Albums" />
+      <Filters />
     </div>
   );
 }
