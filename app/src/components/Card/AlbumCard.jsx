@@ -7,7 +7,7 @@ import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
 import styles from "./AlbumCard.module.css";
 
-export default function AlbumCard({ image, follows, title }) {
+export default function AlbumCard({ image, follows, title, likes }) {
   return (
     <div>
       <Card
@@ -28,7 +28,11 @@ export default function AlbumCard({ image, follows, title }) {
             />
           </CardActionArea>
           <Stack direction="row" spacing={1}>
-            <Chip className={styles.chipStyle} label={`${follows} Follows`} />
+            {likes ? (
+              <Chip className={styles.chipStyle} label={`${likes} Likes`} />
+            ) : (
+              <Chip className={styles.chipStyle} label={`${follows} Follows`} />
+            )}
           </Stack>
         </div>
       </Card>

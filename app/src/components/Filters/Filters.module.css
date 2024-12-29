@@ -1,5 +1,6 @@
 .tabColor{
-    background-color: black;
+    background-color: rgb(18, 21, 238);
     color: white;
+    text-decoration: underline;
     /* text-decoration-color: aliceblue; */
 }

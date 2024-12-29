@@ -9,6 +9,8 @@ import Filters from "./Filters/Filters";
 export default function Home() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
   const [newAlbumsData, setNewAlbumsData] = useState([]);
+  const [songsData, setSongsData] = useState([]);
+  const [genresData, setGenresData] = useState([]);
 
   let topAlbums;
   const getTopAlbumData = async () => {
@@ -17,7 +19,7 @@ export default function Home() {
     );
     topAlbums = await response.json();
     setTopAlbumsData(topAlbums);
-    return topAlbums;
+    // return topAlbums;
   };
 
   let newAlbums;
@@ -27,24 +29,42 @@ export default function Home() {
     );
     newAlbums = await response.json();
     setNewAlbumsData(newAlbums);
-    return newAlbums;
+    // return newAlbums;
+  };
+
+  let songs;
+  const getSongsData = async () => {
+    const response = await fetch("https://qtify-backend-labs.crio.do/songs");
+    songs = await response.json();
+    setSongsData(songs);
+    // return songs;
+  };
+
+  let genres;
+  const getGenresData = async () => {
+    const res = await fetch("https://qtify-backend-labs.crio.do/genres");
+    genres = await res.json();
+    setGenresData(genres.data);
+    // console.log("genres::", genres);
   };
 
   useEffect(() => {
     getTopAlbumData();
     getNewAlbumsData();
+    getSongsData();
+    getGenresData();
   }, []);
 
-  console.log("newAlbumsData::", newAlbumsData);
+  // console.log("newAlbumsData::", newAlbumsData);
 
   return (
     <div className={styles.blackBackground}>
       <NavbarComponent />
       <HeroSection />
       <Section albumsData={topAlbumsData} title="Top Albums" />
-
       <Section albumsData={newAlbumsData} title="New Albums" />
-      <Filters />
+      <Section albumsData={songsData} genresData={genresData} title="Songs" />
+      {/* <Filters /> */}
     </div>
   );
 }

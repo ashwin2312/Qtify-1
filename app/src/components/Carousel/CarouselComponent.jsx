@@ -27,6 +27,7 @@ export default function CarouselComponent({ albumsData }) {
               image={album.image}
               follows={album.follows}
               title={album.title}
+              likes={album.likes}
             />
           </SwiperSlide>
         ))}
