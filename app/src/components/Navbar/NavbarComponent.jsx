@@ -12,6 +12,7 @@ export default function NavbarComponent() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
+        padding: "auto",
       }}
     >
       <div
@@ -19,7 +20,7 @@ export default function NavbarComponent() {
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
-          width: "96%",
+          width: "100%",
         }}
       >
         <NavbarIcon />
