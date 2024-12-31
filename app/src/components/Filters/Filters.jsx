@@ -1,62 +1,75 @@
 import React, { useState } from "react";
 import { Box, Tab, Tabs, AppBar } from "@mui/material";
+import { purple, lightGreen } from "@mui/material/colors";
 import styles from "./Filters.module.css";
 import CarouselComponent from "../Carousel/CarouselComponent";
 
 export default function Filters({ songsData, genresData }) {
   const [value, setValue] = useState(0);
+
+  const rockSongs = songsData.filter((songs) => songs.genre.label === "Rock");
+  const jazzSongs = songsData.filter((songs) => songs.genre.label === "Jazz");
+  const popSongs = songsData.filter((songs) => songs.genre.label === "Pop");
+  const bluesSongs = songsData.filter((songs) => songs.genre.label === "Blues");
+
+  const tabsSx = {
+    "& .MuiButtonBase-root.MuiTab-root.Mui-selected": {
+      // same as: textColor
+      color: "green",
+    },
+    "& .MuiTabs-indicator": {
+      // same as: indicatorColor
+      backgroundColor: "green",
+    },
+  };
+
+  // const primary = lightGreen[400];
+
   const handleTabs = (e, val) => {
     console.warn("Tabs changed", val);
     setValue(val);
   };
   console.log("songs::", songsData);
-  console.log("genres::", genresData);
+  // console.log("genres::", genresData);
 
   return (
     <div>
-      <Box sx={{ color: "black", bgcolor: "white" }}>
+      <Box sx={{ color: "white", bgcolor: "black" }}>
         <Tabs
           value={value}
           onChange={handleTabs}
-          // textColor="inherit"
-          sx={{
-            marginRight: "auto",
-            "& button:hover": { backgroundColor: "black", color: "white" },
-          }}
-          className={styles.tabColor}
-          indicatorColor="secondary"
+          textColor="inherit"
+          sx={tabsSx}
         >
-          {genresData.map((data, index) => {
-            <Tab label={`${data.label}`} sx={{ color: "black" }} key={index} />;
-            {
-              console.log("tab list rendered", data.label);
-            }
-          })}
-          {/* <Tab label="Item 1" />
-          <Tab label="Item 2" />
-          <Tab label="Item 3" />
-          <Tab label="Item 4" /> */}
+          <Tab label="All" />
+          <Tab label="Rock" />
+          <Tab label="Pop" />
+          <Tab label="Jazz" />
+          <Tab label="Blues" />
         </Tabs>
 
         <TabPanel value={value} index={0}>
-          Item 1 Detail
+          <CarouselComponent albumsData={songsData} />
         </TabPanel>
         <TabPanel value={value} index={1}>
-          Item 2 Detail
+          <CarouselComponent albumsData={rockSongs} />
         </TabPanel>
         <TabPanel value={value} index={2}>
-          Item 3 Detail
+          <CarouselComponent albumsData={popSongs} />
         </TabPanel>
         <TabPanel value={value} index={3}>
-          Item 4 Detail
+          <CarouselComponent albumsData={jazzSongs} />
+        </TabPanel>
+
+        <TabPanel value={value} index={4}>
+          <CarouselComponent albumsData={bluesSongs} />
         </TabPanel>
       </Box>
-      <CarouselComponent albumsData={songsData} />
     </div>
   );
 }
 
 function TabPanel(props) {
   const { children, value, index } = props;
-  return <div>{value == index && <h1>{children}</h1>}</div>;
+  return <>{value == index && <>{children}</>}</>;
 }

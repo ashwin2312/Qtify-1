@@ -61,9 +61,15 @@ export default function Home() {
     <div className={styles.blackBackground}>
       <NavbarComponent />
       <HeroSection />
-      <Section albumsData={topAlbumsData} title="Top Albums" />
-      <Section albumsData={newAlbumsData} title="New Albums" />
-      <Section albumsData={songsData} genresData={genresData} title="Songs" />
+      <div className={styles.padding}>
+        <div className={styles.bottomMargin}>
+          <Section albumsData={topAlbumsData} title="Top Albums" />
+        </div>
+        <div className={styles.bottomMargin}>
+          <Section albumsData={newAlbumsData} title="New Albums" />
+        </div>
+        <Section albumsData={songsData} genresData={genresData} title="Songs" />
+      </div>
       {/* <Filters /> */}
     </div>
   );

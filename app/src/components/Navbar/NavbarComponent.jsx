@@ -12,7 +12,7 @@ export default function NavbarComponent() {
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
-        padding: "auto",
+        padding: "0 15px 0 15px",
       }}
     >
       <div

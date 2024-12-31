@@ -1,3 +1,13 @@
 .blackBackground{
     background-color: black;
+    /* padding: 20px; */
+    width: 100%;
+}
+
+.padding{
+    padding: 0 5rem;
+}
+
+.bottomMargin{
+    margin-bottom: 2rem;
 }

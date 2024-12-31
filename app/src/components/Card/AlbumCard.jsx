@@ -16,6 +16,7 @@ export default function AlbumCard({ image, follows, title, likes }) {
           gap: 2,
           display: "flex",
           flexDirection: "column",
+          borderRadius: "10px",
         }}
       >
         <div className={styles.card}>
