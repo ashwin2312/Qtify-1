@@ -5,7 +5,7 @@ import CardActionArea from "@mui/material/CardActionArea";
 import Chip from "@mui/material/Chip";
 import Stack from "@mui/material/Stack";
 import { Typography } from "@mui/material";
-import styles from "./AlbumCard.module.css";
+import styles from "./Albumcard.module.css";
 
 export default function AlbumCard({ image, follows, title, likes }) {
   return (
