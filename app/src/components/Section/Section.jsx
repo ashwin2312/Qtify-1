@@ -20,7 +20,12 @@ export default function Section({ albumsData, genresData, title }) {
           marginBottom: "10px",
         }}
       >
-        <Typography className={styles.textStyle}>{title}</Typography>
+        <Typography
+          className={styles.textStyle}
+          sx={{ fontFamily: "Poppins", fontSize: "20px", fontWeight: "600" }}
+        >
+          {title}
+        </Typography>
         {title !== "Songs" && (
           <button className={styles.btnStyle} onClick={handleClick}>
             {showAll ? "Collapse" : "Show all"}
@@ -34,7 +39,7 @@ export default function Section({ albumsData, genresData, title }) {
             <Box sx={{ flexGrow: 1 }}>
               <Grid2 container spacing={3} columns={{ xs: 2, sm: 3, md: 4 }}>
                 {albumsData.map((album) => (
-                  <Grid2 item="true" xs={2} sm={4} md={4} lg={4} key={album.id}>
+                  <Grid2 item="true" xs={2} sm={4} md={7} lg={7} key={album.id}>
                     <AlbumCard
                       image={album.image}
                       follows={album.follows}

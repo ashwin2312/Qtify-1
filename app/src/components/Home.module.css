@@ -1,7 +1,16 @@
+/* :root{
+    max-width: fit-content;
+} */
+
+
 .blackBackground{
     background-color: black;
     /* padding: 20px; */
-    width: 100%;
+    width: auto;
+    /* margin: auto; */
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
 }
 
 .padding{

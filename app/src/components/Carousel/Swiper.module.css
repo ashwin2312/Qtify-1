@@ -1,0 +1,17 @@
+.swiperContainer{
+    position: relative;
+}
+
+.leftSwiperButton .rightSwiperButton{
+    position: absolute;
+    background-color: black;
+    color: black;
+}
+
+.leftSwiperButton{
+    left: 10px;
+}
+
+.rightSwiperButton{
+    right: 10px;
+}

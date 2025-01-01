@@ -15,11 +15,11 @@ export default function Filters({ songsData, genresData }) {
   const tabsSx = {
     "& .MuiButtonBase-root.MuiTab-root.Mui-selected": {
       // same as: textColor
-      color: "green",
+      color: "white",
     },
     "& .MuiTabs-indicator": {
       // same as: indicatorColor
-      backgroundColor: "green",
+      backgroundColor: "lightgreen",
     },
   };
 
@@ -35,12 +35,7 @@ export default function Filters({ songsData, genresData }) {
   return (
     <div>
       <Box sx={{ color: "white", bgcolor: "black" }}>
-        <Tabs
-          value={value}
-          onChange={handleTabs}
-          textColor="inherit"
-          sx={tabsSx}
-        >
+        <Tabs value={value} onChange={handleTabs} textColor="white" sx={tabsSx}>
           <Tab label="All" />
           <Tab label="Rock" />
           <Tab label="Pop" />
@@ -71,5 +66,7 @@ export default function Filters({ songsData, genresData }) {
 
 function TabPanel(props) {
   const { children, value, index } = props;
-  return <>{value == index && <>{children}</>}</>;
+  return (
+    <>{value == index && <div style={{ marginTop: "15px" }}>{children}</div>}</>
+  );
 }
