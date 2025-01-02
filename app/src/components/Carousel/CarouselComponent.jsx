@@ -29,8 +29,8 @@ export default function CarouselComponent({ albumsData }) {
         navigation
         allowTouchMove
         // initialSlide={0}
-        // onSwiper={(swiper) => console.log(swiper)}
-        // onSlideChange={() => console.log("slide change")}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
       >
         {/* <div>
           <LeftNavigation />
