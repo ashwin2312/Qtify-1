@@ -1,10 +1,9 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import NavbarComponent from "./Navbar/NavbarComponent";
 import HeroSection from "./Hero/HeroSection";
-import Divider from "@mui/material/Divider";
+
 import styles from "./Home.module.css";
 import Section from "./Section/Section";
-import Filters from "./Filters/Filters";
 
 export default function Home() {
   const [topAlbumsData, setTopAlbumsData] = useState([]);
@@ -68,7 +67,13 @@ export default function Home() {
         <div className={styles.bottomMargin}>
           <Section albumsData={newAlbumsData} title="New Albums" />
         </div>
-        <Section albumsData={songsData} genresData={genresData} title="Songs" />
+        <div className={styles.bottomMargin}>
+          <Section
+            albumsData={songsData}
+            genresData={genresData}
+            title="Songs"
+          />
+        </div>
       </div>
       {/* <Filters /> */}
     </div>

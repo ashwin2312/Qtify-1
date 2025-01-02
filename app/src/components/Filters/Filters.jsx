@@ -26,16 +26,21 @@ export default function Filters({ songsData, genresData }) {
   // const primary = lightGreen[400];
 
   const handleTabs = (e, val) => {
-    console.warn("Tabs changed", val);
+    // console.warn("Tabs changed", val);
     setValue(val);
   };
-  console.log("songs::", songsData);
+  // console.log("songs::", songsData);
   // console.log("genres::", genresData);
 
   return (
     <div>
       <Box sx={{ color: "white", bgcolor: "black" }}>
-        <Tabs value={value} onChange={handleTabs} textColor="white" sx={tabsSx}>
+        <Tabs
+          value={value}
+          onChange={handleTabs}
+          textColor="inherit"
+          sx={tabsSx}
+        >
           <Tab label="All" />
           <Tab label="Rock" />
           <Tab label="Pop" />

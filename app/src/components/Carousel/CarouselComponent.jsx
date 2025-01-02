@@ -13,6 +13,8 @@ import Left from "../Icons/Left";
 import Right from "../Icons/Right";
 import { useRef } from "react";
 import styles from "./Swiper.module.css";
+import LeftNavigation from "./LeftNavigation";
+import RightNavigation from "./RightNavigation";
 
 export default function CarouselComponent({ albumsData }) {
   const leftRef = useRef(null);
@@ -24,18 +26,16 @@ export default function CarouselComponent({ albumsData }) {
         modules={[Navigation, Pagination, Scrollbar, A11y]}
         spaceBetween={40}
         slidesPerView={7}
-        // navigation
-        navigation={{
-          prevEl: leftRef.current,
-          nextEl: rightRef.current,
-        }}
-        onInit={(swiper) => {
-          swiper.params.navigation.prevEl = leftRef.current;
-          swiper.params.navigation.nextEl = rightRef.current;
-        }}
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
+        navigation
+        allowTouchMove
+        initialSlide={0}
+        // onSwiper={(swiper) => console.log(swiper)}
+        // onSlideChange={() => console.log("slide change")}
       >
+        <div>
+          <LeftNavigation />
+          <RightNavigation />
+        </div>
         {albumsData.map((album) => (
           <SwiperSlide key={album.id}>
             <AlbumCard
@@ -46,12 +46,6 @@ export default function CarouselComponent({ albumsData }) {
             />
           </SwiperSlide>
         ))}
-        <button ref={leftRef} className={styles.leftSwiperButton}>
-          <Left onClick={() => swiper.slidePrev()} />
-        </button>
-        <button ref={rightRef} className={styles.rightSwiperButton}>
-          <Right onClick={() => swiper.slideNext()} />
-        </button>
       </Swiper>
 
       {/* Custom navigation buttons */}
