@@ -21,7 +21,7 @@ export default function NavbarComponent() {
             marginLeft: "32px",
             marginTop: "10px",
             marginBottom: "10px",
-            border: "1px solid black",
+            // border: "1px solid black",
           }}
         >
           <NavbarIcon />
