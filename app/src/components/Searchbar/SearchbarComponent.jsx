@@ -13,7 +13,7 @@ export default function SearchbarComponent() {
     >
       <InputBase
         sx={{ ml: 1, flex: 1 }}
-        placeholder="search a album of your choice"
+        placeholder="Search a album of your choice"
         inputProps={{ "aria-label": "search google maps" }}
       />
       <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />

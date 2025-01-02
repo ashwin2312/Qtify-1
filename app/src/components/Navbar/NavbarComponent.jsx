@@ -9,6 +9,7 @@ export default function NavbarComponent() {
     <div className={styles.navbar}>
       <div
         style={{
+          // position: "relative",
           display: "flex",
           justifyContent: "space-between",
           alignItems: "center",
@@ -18,27 +19,31 @@ export default function NavbarComponent() {
         <div
           style={{
             // border: "2px solid black",
-            position: "absolute",
-            left: "32px",
-            top: "20px",
+            // position: "absolute",
+            // left: "32px",
+            // top: "20px",
+            marginLeft: "32px",
           }}
         >
           <NavbarIcon />
         </div>
         <div
-          style={{
-            // border: "2px solid black",
-            position: "absolute",
-            left: "550px",
-          }}
+          style={
+            {
+              // border: "2px solid black",
+              // position: "absolute",
+              // left: "550px",
+            }
+          }
         >
           <SearchbarComponent />
         </div>
         <div
           style={{
             // border: "2px solid black",
-            position: "absolute",
-            right: "32px",
+            // position: "absolute",
+            // right: "32px",
+            marginRight: "32px",
           }}
         >
           <ButtonComponent text="Send Feedback" />
