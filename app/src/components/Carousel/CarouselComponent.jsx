@@ -28,14 +28,14 @@ export default function CarouselComponent({ albumsData }) {
         slidesPerView={7}
         navigation
         allowTouchMove
-        initialSlide={0}
+        // initialSlide={0}
         // onSwiper={(swiper) => console.log(swiper)}
         // onSlideChange={() => console.log("slide change")}
       >
-        <div>
+        {/* <div>
           <LeftNavigation />
           <RightNavigation />
-        </div>
+        </div> */}
         {albumsData.map((album) => (
           <SwiperSlide key={album.id}>
             <AlbumCard
