@@ -15,9 +15,33 @@ export default function NavbarComponent() {
           width: "100%",
         }}
       >
-        <NavbarIcon />
-        <SearchbarComponent />
-        <ButtonComponent text="Send Feedback" />
+        <div
+          style={{
+            // border: "2px solid black",
+            position: "absolute",
+            left: "32px",
+          }}
+        >
+          <NavbarIcon />
+        </div>
+        <div
+          style={{
+            // border: "2px solid black",
+            position: "absolute",
+            left: "550px",
+          }}
+        >
+          <SearchbarComponent />
+        </div>
+        <div
+          style={{
+            // border: "2px solid black",
+            position: "absolute",
+            right: "32px",
+          }}
+        >
+          <ButtonComponent text="Send Feedback" />
+        </div>
       </div>
     </div>
   );
