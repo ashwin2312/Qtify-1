@@ -1,5 +1,4 @@
 
-
 .btn{    
     border-radius: 12px ;    
     opacity: 0px;
@@ -10,6 +9,8 @@
     background: #121212;
     position: relative;
     top: 8px;
+
+    cursor: pointer;
 }
 
 .btn:hover{
@@ -17,7 +18,7 @@
 }
 
 .btn p{
-    font-family: Poppins;
+    font-family: 'Poppins', sans-serif;
     font-size: 16px;
     font-weight: 600;
     line-height: 27px;
@@ -29,6 +30,7 @@
 
     /* Color */
     color: #34C94B;
+    
 
     position: relative;
     top:-7px;
