@@ -5,4 +5,8 @@
     opacity: 0px;
 
     background: #34C94B;
+
+    display: "flex";    
+    align-content: center;
+    /* padding: "0 15px 0 15px"; */
 }

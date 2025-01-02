@@ -6,15 +6,7 @@ import ButtonComponent from "../Button/ButtonComponent";
 
 export default function NavbarComponent() {
   return (
-    <div
-      className={styles.navbar}
-      style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "0 15px 0 15px",
-      }}
-    >
+    <div className={styles.navbar}>
       <div
         style={{
           display: "flex",
