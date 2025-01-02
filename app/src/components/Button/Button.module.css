@@ -29,7 +29,7 @@
     width: 138px;
 
     /* Color */
-    color: #34C94B;
+    color:var(#34C94B) ;
     
 
     position: relative;
