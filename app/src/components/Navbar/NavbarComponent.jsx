@@ -20,6 +20,7 @@ export default function NavbarComponent() {
             // border: "2px solid black",
             position: "absolute",
             left: "32px",
+            top: "20px",
           }}
         >
           <NavbarIcon />
