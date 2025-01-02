@@ -3,12 +3,13 @@
 .btn{    
     border-radius: 12px ;    
     opacity: 0px;
+    height: 48px;
+    /* width: Hug(170px); */
 
     /* BackgroungColor */
     background: #121212;
-
-    /* Color */
-    border: 1px solid #34C94B
+    position: relative;
+    top: 8px;
 }
 
 .btn:hover{
@@ -17,14 +18,18 @@
 
 .btn p{
     font-family: Poppins;
-    /* font-size: 18px; */
+    font-size: 16px;
     font-weight: 600;
     line-height: 27px;
     letter-spacing: 0.25px;
     text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
+    width: 138px;
 
     /* Color */
     color: #34C94B;
+
+    position: relative;
+    top:-7px;
 }

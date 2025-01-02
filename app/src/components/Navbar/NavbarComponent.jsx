@@ -6,47 +6,35 @@ import ButtonComponent from "../Button/ButtonComponent";
 
 export default function NavbarComponent() {
   return (
-    <div className={styles.navbar}>
+    <div className={styles.navbarContainer}>
       <div
         style={{
-          // position: "relative",
           display: "flex",
           justifyContent: "space-between",
-          alignItems: "center",
+          // alignItems: "center",
           width: "100%",
+          
         }}
       >
         <div
           style={{
-            // border: "2px solid black",
-            // position: "absolute",
-            // left: "32px",
-            // top: "20px",
             marginLeft: "32px",
+            marginTop: "10px",
+            marginBottom: "10px",
+            border: "1px solid black",
           }}
         >
           <NavbarIcon />
         </div>
-        <div
-          style={
-            {
-              // border: "2px solid black",
-              // position: "absolute",
-              // left: "550px",
-            }
-          }
-        >
+        <div style={{ margin: "auto" }}>
           <SearchbarComponent />
         </div>
         <div
           style={{
-            // border: "2px solid black",
-            // position: "absolute",
-            // right: "32px",
             marginRight: "32px",
           }}
         >
-          <ButtonComponent text="Send Feedback" />
+          <ButtonComponent text="Give Feedback" />
         </div>
       </div>
     </div>
