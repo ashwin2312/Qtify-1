@@ -1,16 +1,23 @@
 
 .btn{    
+    background-color: var(--color-black);
+    color: var(--color-primary);
     border-radius: 12px ;    
-    opacity: 0px;
-    height: 48px;
-    /* width: Hug(170px); */
+    cursor: pointer;
+    font-family: 'Poppins', sans-serif;
+    padding: 10px 16px; 
+    margin: 14px;
+    /* opacity: 0px; */
+    
+    
+    height: 47px;
+    width: 170px;
+    font-size: medium;
 
     /* BackgroungColor */
-    background: #121212;
+    /* background: #121212; */
     position: relative;
-    top: 8px;
-
-    cursor: pointer;
+    top: 8px;    
 }
 
 .btn:hover{

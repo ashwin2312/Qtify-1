@@ -30,6 +30,11 @@ body {
   min-width: 320px;
   min-height: 100vh; */
   font-family: "Poppins", Arial, sans-serif;
+  background-color: var(--color-black); 
+  color: var(--color-white);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  overflow-x: hidden;
 }
 /* 
 h1 {
