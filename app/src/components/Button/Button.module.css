@@ -18,7 +18,7 @@
 }
 
 .btn p{
-    font-family: 'Poppins', sans-serif;
+    font-family: Poppins;
     font-size: 16px;
     font-weight: 600;
     line-height: 27px;
@@ -29,7 +29,8 @@
     width: 138px;
 
     /* Color */
-    color:var(--color-primary) ;
+    /* color:var(--color-primary) ; */
+    color: #34C94B;
     
 
     position: relative;

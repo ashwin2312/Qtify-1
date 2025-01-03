@@ -1,8 +1,9 @@
-import React from "react";
+// import React from "react";
 import styles from "./Navbar.module.css";
 import NavbarIcon from "../Icons/NavbarIcon";
 import SearchbarComponent from "../Searchbar/SearchbarComponent";
 import ButtonComponent from "../Button/ButtonComponent";
+// import React from "react";
 
 export default function NavbarComponent() {
   return (
@@ -34,7 +35,7 @@ export default function NavbarComponent() {
             marginRight: "32px",
           }}
         >
-          <ButtonComponent text="Give Feedback" />
+          <ButtonComponent  />
         </div>
       </div>
     </div>
