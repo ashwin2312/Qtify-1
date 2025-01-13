@@ -14,15 +14,15 @@ export default function NavbarComponent() {
           justifyContent: "space-between",
           // alignItems: "center",
           width: "100%",
-          
         }}
       >
         <div
           style={{
-            marginLeft: "32px",
-            marginTop: "10px",
-            marginBottom: "10px",
+            // marginLeft: "32px",
+            // marginTop: "20px",
+            // marginBottom: "10px",
             // border: "1px solid black",
+            margin: "auto 0 auto  32px",
           }}
         >
           <NavbarIcon />
@@ -33,9 +33,10 @@ export default function NavbarComponent() {
         <div
           style={{
             marginRight: "32px",
+            marginBottom: "auto ",
           }}
         >
-          <ButtonComponent  />
+          <ButtonComponent />
         </div>
       </div>
     </div>

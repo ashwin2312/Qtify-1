@@ -1,7 +1,9 @@
 
 .btn{    
-    background-color: var(--color-black);
-    color: var(--color-primary);
+    /* background-color: var(--color-black);
+    color: var(--color-primary); */
+    background-color: black;
+    /* color: #34C94B; */
     border-radius: 12px ;    
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
@@ -16,8 +18,12 @@
 
     /* BackgroungColor */
     /* background: #121212; */
-    position: relative;
-    top: 8px;    
+    /* position: relative; */
+    /* top: 8px;     */
+
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 }
 
 .btn:hover{
@@ -40,6 +46,6 @@
     color: #34C94B;
     
 
-    position: relative;
-    top:-7px;
+    /* position: relative;
+    top:-7px; */
 }
